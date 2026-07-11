@@ -1,0 +1,95 @@
+:root {
+    --bg-dark: #09090b;
+    --bg-card: #18181b;
+    --border: #27272a;
+    --text-white: #f4f4f5;
+    --text-gray: #a1a1aa;
+    --gold: #d4af37;
+    --whatsapp-green: #25d366;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    margin: 0; padding: 0;
+}
+
+.main-header {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    background: rgba(9, 9, 11, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+.header-container {
+    max-width: 1000px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.logo-group { display: flex; align-items: center; gap: 8px; }
+.portal-brand { font-weight: 800; letter-spacing: 1px; }
+.gold-text { color: var(--gold); }
+.live-status { font-size: 0.8rem; color: #2ed573; font-weight: bold; }
+
+/* BLOCOS DE PATROCÍNIO (ONDE VOCÊ GANHA DINHEIRO) */
+.ad-zone-top { padding: 1rem; max-width: 1000px; margin: 0 auto; }
+.ad-wrapper-master {
+    background: linear-gradient(90deg, rgba(214,175,55,0.15) 0%, rgba(24,24,27,1) 100%);
+    border: 1px solid var(--gold); padding: 12px; border-radius: 8px; position: relative;
+}
+.ad-badge {
+    position: absolute; top: -8px; left: 12px; background: var(--gold); color: #000;
+    font-size: 0.65rem; font-weight: 800; padding: 2px 6px; border-radius: 4px;
+}
+.ad-link-master { color: var(--text-white); text-decoration: none; font-size: 0.95rem; display: block; margin-top: 4px; }
+
+/* CONTEÚDO PRINCIPAL EM GRID (RESPONSIVO) */
+.content-grid {
+    max-width: 1000px; margin: 0 auto; padding: 1rem;
+    display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem;
+}
+
+.section-title { font-size: 1.4rem; border-left: 4px solid var(--gold); padding-left: 8px; margin-bottom: 1.5rem; }
+
+/* NOTÍCIAS (GIRO) */
+.news-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.news-card { background: var(--bg-card); border: 1px solid var(--border); padding: 1.2rem; border-radius: 8px; }
+.news-card h3 a { color: var(--text-white); text-decoration: none; }
+.news-card h3 a:hover { color: var(--gold); }
+.news-card p { color: var(--text-gray); font-size: 0.9rem; margin: 8px 0; }
+.news-category { font-size: 0.75rem; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+.tag-transito { background: #ef4444; color: #fff; }
+.tag-economia { background: #3b82f6; color: #fff; }
+
+/* VAGAS (RETENÇÃO) */
+.jobs-list { display: flex; flex-direction: column; gap: 1rem; }
+.job-item {
+    background: var(--bg-card); border: 1px solid var(--border); padding: 1.2rem;
+    border-radius: 8px; display: flex; flex-direction: column; justify-content: space-between; gap: 1rem;
+}
+.job-company { color: var(--gold); font-size: 0.85rem; font-weight: 600; margin: 2px 0; }
+.job-desc { color: var(--text-gray); font-size: 0.9rem; margin: 0; }
+
+.btn-whatsapp {
+    background: var(--whatsapp-green); color: #fff; text-decoration: none; text-align: center;
+    padding: 10px; border-radius: 6px; font-weight: 700; font-size: 0.9rem; transition: 0.2s;
+}
+.btn-whatsapp:hover { background: #20ba5a; }
+
+/* BANNER COMERCIAL INFERIOR */
+.ad-zone-bottom { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+.ad-card-commercial {
+    background: #27272a; border: 1px dashed var(--text-gray); padding: 1.5rem; border-radius: 8px; text-align: center; position: relative;
+}
+.btn-ad-contact {
+    display: inline-block; background: var(--text-white); color: var(--bg-dark); text-decoration: none;
+    font-weight: 700; padding: 8px 16px; border-radius: 4px; margin-top: 1rem; font-size: 0.9rem;
+}
+
+.main-footer { text-align: center; padding: 2rem; color: var(--text-gray); font-size: 0.85rem; border-top: 1px solid var(--border); }
+
+/* ADAPTAÇÃO PARA CELULAR (ANDROID/IOS) */
+@media (max-width: 768px) {
+    .content-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
